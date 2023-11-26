@@ -7,8 +7,14 @@ export default function Home() {
   return (
     <>
       <div className="flex flex-wrap justify-center">
-        {notes.map((note) => {
-          return <NoteWidget heading={note.heading} body={note.body} />;
+        {notes.map((note, index) => {
+          return (
+            <NoteWidget
+              key={index}
+              heading={note.heading}
+              body={note.body}
+            />
+          );
         })}
       </div>
     </>
